@@ -1,0 +1,23 @@
+{
+	"name": "dustify",
+	"version": "0.8.2",
+	"description": "Dustify: the dustjs template compiler",
+	"keywords": ["build", "builder", "dust", "dustjs", "linkedin", "template"],
+	"bin": "./bin/dustify",
+	"main": "./lib/dustify.js",
+	"dependencies": {
+		"minimist": "~0.0.5",
+		"fs-extra": "~0.8.1",
+		"async": "~0.2.10",
+		"dustjs-linkedin": "~2.3.3"
+	},
+	"devDependencies": {
+		"tap": "~0.4.8"
+	},
+	"scripts": {
+		"test": "tap --timeout 60 ./test/test.js"
+	},
+	"repository": "git://github.com/theakman2/node-modules-dustify.git",
+	"author": "A Kazim <theakman2@hotmail.com>",
+	"license": "MIT"
+}

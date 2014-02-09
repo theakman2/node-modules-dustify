@@ -1,0 +1,39 @@
+----------------------------------------------------------
+ Dustify: the dustjs template compiler - (c) 2014 A Kazim
+----------------------------------------------------------
+
+USAGE
+
+dustify [options]
+
+OPTIONS
+
+Name             Description                        Example
+--src            A dustjs file or a directory       --src path/to/src
+                 containing dustjs files. Can be
+                 set multiple times.
+--build          The directory to save compiled     --build path/to/build
+                 or precompiled dustjs files.
+--requireBase    The directory relative to which    --requireBase path/to/src
+                 paths to dustjs partials and
+                 blocks are resolved.
+--precompile     Precompile the dustjs templates    --precompile
+                 to javascript instead of
+                 compiling to HTML.
+--tplData        Data passed to templates when      --tplData.name Bob
+                 compiling. Not used when           --tplData.age 28
+                 --precompile flag is set. Can
+                 be set multiple times.
+--inputExt       The file extension used for the    --inputExt .tmpl
+                 source dustjs templates. Can be
+                 set multiple times. Include the
+                 leading period. Defaults to
+                 '.dust' and '.tpl'.
+--outputExt      The file extension compiled or     --outputExt .htm
+                 precompiled templates are saved
+                 as. Include the leading period.
+                 Defaults to '.js' when
+                 --precompile flag is set and
+                 '.html' otherwise.
+--version        Display version.                   --version
+--help           Display this help screen.          --help
