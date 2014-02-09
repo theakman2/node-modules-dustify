@@ -16,10 +16,15 @@ if (argv.help || !rawArgv.length) {
 } else if (argv.version) {
 	console.log(require(__dirname+"/../package.json").version);
 } else {
-	require("../lib/dustify.js")(argv,function(err){
+	require("../lib/dustify.js")(argv,function(err,filesProcessed){
 		if (err) {
-			throw err;
+			console.error("dustify >> processing failed");
+			console.error("dustify >> reason: " + (err.message||err));
+			return;
 		}
-		console.log("done");
+		console.log(
+			"dustify >> processing complete"
+			+ " (" + filesProcessed.length + " files processed)"
+		);
 	});
 }

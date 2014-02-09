@@ -54,12 +54,15 @@ Name             Description                        Example
 
 ```javascript
 var dustify = require("dustify");
-dustify(OPTIONS,function(err){
+dustify(OPTIONS,function(err,processed){
 	if (err) {
 		// an error has occurred
 		throw err;
 	} else {
-		// dustjs templates successfully (pre)compiled
+		/**
+		 * dustjs templates successfully (pre)compiled
+		 * `processed` is an array of processed dustjs template filepaths
+		 */
 	}
 });
 ```

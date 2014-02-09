@@ -19,13 +19,14 @@ test("dustify compile", function(t) {
 			t.end();
 			return;
 		}
-		dustify(opts, function(err) {
+		dustify(opts, function(err,processedFiles) {
 			if (err) {
 				t.fail("dustify errored: " + err);
 				t.end();
 				return;
 			}
 			t.pass("dustify did not error");
+			t.strictEqual(processedFiles.length,3,"3 files should have been processed");
 			fs.readdir(opts.build,function(err,files){
 				if (err) {
 					t.fail("could not read contents of build directory");
@@ -95,13 +96,14 @@ test("dustify precompile", function(t) {
 			t.end();
 			return;
 		}
-		dustify(opts, function(err) {
+		dustify(opts, function(err,processedFiles) {
 			if (err) {
 				t.fail("dustify errored: " + err);
 				t.end();
 				return;
 			}
 			t.pass("dustify did not error");
+			t.strictEqual(processedFiles.length,2,"2 files should have been processed");
 			fs.readdir(opts.build,function(err,files){
 				if (err) {
 					t.fail("could not read contents of build directory");
@@ -121,5 +123,28 @@ test("dustify precompile", function(t) {
 				});
 			});
 		});
+	});
+});
+
+test("dustify no files", function(t) {
+	var opts = {
+		src : __dirname + "/src/pages",
+		build : __dirname + "/build",
+		requireBase : __dirname + "/src",
+		precompile: true,
+		inputExt:".foo",
+		tplData : {
+			name : "bob"
+		}
+	};
+	dustify(opts, function(err,processedFiles) {
+		if (err) {
+			t.fail("dustify errored: " + err);
+			t.end();
+			return;
+		}
+		t.pass("dustify did not error");
+		t.strictEqual(processedFiles.length,0,"no files should have been processed");
+		t.end();
 	});
 });
