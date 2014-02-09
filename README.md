@@ -1,6 +1,6 @@
 # node-modules-dustify
 
-_Dustify: the dustjs template compiler_
+_Dustify: the dustjs template compiler for NodeJS_
 
 Compile [dustjs-linkedin](https://github.com/linkedin/dustjs) templates into static HTML or precompile into javascript.
 
