@@ -54,8 +54,11 @@ dustify(OPTIONS,function(err,processed){
 		throw err;
 	} else {
 		/**
-		 * dustjs templates successfully (pre)compiled
-		 * `processed` is an array of processed dustjs template filepaths
+		 * dustjs templates successfully compiled
+		 * 
+		 * `processed` is an object where the keys are the absolute filepaths of the
+		 * source templates and the values are the absolute filepaths of the saved
+		 * templates.
 		 */
 	}
 });

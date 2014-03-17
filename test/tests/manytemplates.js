@@ -27,7 +27,13 @@ test("manytemplates", function(t) {
 				return;
 			}
 			t.pass("dustify did not error");
-			t.strictEqual(processedFiles.length,3,"3 files should have been processed");
+			
+			var processed = {};
+			processed[path.join(__dirname,"..","src","manytemplates","pages","page1.tpl")] = path.join(__dirname,"..","public","manytemplates","page1.html");
+			processed[path.join(__dirname,"..","src","manytemplates","pages","page2.dust")] = path.join(__dirname,"..","public","manytemplates","page2.html");
+			processed[path.join(__dirname,"..","src","manytemplates","pages","sub","page3.dust")] = path.join(__dirname,"..","public","manytemplates","sub","page3.html");
+			
+			t.equivalent(processedFiles,processed,"3 files should have been processed");
 			fs.readdir(opts.build,function(err,files){
 				if (err) {
 					t.fail("could not read contents of build directory");

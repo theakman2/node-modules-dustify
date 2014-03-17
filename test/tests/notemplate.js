@@ -32,7 +32,7 @@ test("notemplate", function(t) {
 				return;
 			}
 			t.pass("dustify did not error");
-			t.strictEqual(processedFiles.length,0,"0 files should have been processed");
+			t.equivalent(processedFiles,{},"0 files should have been processed");
 			fs.readdir(opts.build,function(err){
 				if (err && (err.code === "ENOENT")) {
 					t.ok("build directory wasn't created");

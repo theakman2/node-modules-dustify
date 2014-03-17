@@ -27,7 +27,11 @@ test("singletemplate", function(t) {
 				return;
 			}
 			t.pass("dustify did not error");
-			t.strictEqual(processedFiles.length,1,"1 file should have been processed");
+			
+			var processed = {};
+			processed[path.join(__dirname,"..","src","singletemplate","pages","page2.dust")] = path.join(__dirname,"..","public","singletemplate","page2.html");
+			t.equivalent(processedFiles,processed,"3 files should have been processed");
+
 			fs.readdir(opts.build,function(err,files){
 				if (err) {
 					t.fail("could not read contents of build directory");
