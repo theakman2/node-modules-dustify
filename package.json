@@ -1,6 +1,6 @@
 {
 	"name": "dustify",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Dustify: the dustjs template compiler",
 	"keywords": ["build", "builder", "dust", "dustjs", "linkedin", "template"],
 	"bin": "./bin/dustify",

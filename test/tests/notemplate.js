@@ -6,10 +6,15 @@ var test = require("tap").test;
 
 var dustify = require("../../lib/dustify.js");
 
+var re = /dummy$/;
+
 test("notemplate", function(t) {
 	var opts = {
 		src : path.join(__dirname,"..","src","notemplate","pages"),
 		build : path.join(__dirname,"..","public","notemplate"),
+		exclude:function(file) {
+			return re.test(file);
+		},
 		tplData : {
 			name : "bob"
 		}
