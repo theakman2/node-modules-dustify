@@ -14,12 +14,6 @@ Name             Description                        Example
                  set multiple times.
 --build          The directory to save compiled     --build path/to/build
                  or precompiled dustjs files.
---requireBase    The directory relative to which    --requireBase path/to/src
-                 paths to dustjs partials and
-                 blocks are resolved.
---precompile     Precompile the dustjs templates    --precompile
-                 to javascript instead of
-                 compiling to HTML.
 --tplData        Data passed to templates when      --tplData.name Bob
                  compiling. Not used when           --tplData.age 28
                  --precompile flag is set. Can

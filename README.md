@@ -2,7 +2,7 @@
 
 _Dustify: the dustjs template compiler for NodeJS_
 
-Compile [dustjs-linkedin](https://github.com/linkedin/dustjs) templates into static HTML or precompile into javascript.
+Compile [dustjs-linkedin](https://github.com/linkedin/dustjs) templates into static HTML.
 
 ## Installation
 
