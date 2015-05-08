@@ -1,12 +1,12 @@
 # node-modules-dustify
 
-_Dustify: the dustjs template compiler for NodeJS_
+_DustJS-tmpl: the dustjs template compiler for NodeJS_
 
 Compile [dustjs-linkedin](https://github.com/linkedin/dustjs) templates into static HTML.
 
 ## Installation
 
-	$ npm install dustify
+	$ npm install dustjs-tmpl
 
 ## Usage
 
@@ -15,7 +15,7 @@ Compile [dustjs-linkedin](https://github.com/linkedin/dustjs) templates into sta
 ```
 USAGE
 
-dustify [options]
+dustjs-tmpl [options]
 
 OPTIONS
 
@@ -47,8 +47,8 @@ Name             Description                        Example
 ### Programmatically
 
 ```javascript
-var dustify = require("dustify");
-dustify(OPTIONS,function(err,processed){
+var dustjstmpl = require("dustjs-tmpl");
+dustjstmpl(OPTIONS,function(err,processed){
 	if (err) {
 		// an error has occurred
 		throw err;

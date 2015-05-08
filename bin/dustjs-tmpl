@@ -16,14 +16,14 @@ if (argv.help || !rawArgv.length) {
 } else if (argv.version) {
 	console.log(require(__dirname+"/../package.json").version);
 } else {
-	require("../lib/dustify.js")(argv,function(err,filesProcessed){
+	require("../lib/dustjs-tmpl.js")(argv,function(err,filesProcessed){
 		if (err) {
-			console.error("dustify >> processing failed");
-			console.error("dustify >> reason: " + (err.message||err));
+			console.error("dustjs-tmpl >> processing failed");
+			console.error("dustjs-tmpl >> reason: " + (err.message||err));
 			return;
 		}
 		console.log(
-			"dustify >> processing complete"
+			"dustjs-tmpl >> processing complete"
 			+ " (" + filesProcessed.length + " files processed)"
 		);
 	});

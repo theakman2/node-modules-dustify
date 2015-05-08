@@ -1,15 +1,15 @@
 {
-	"name": "dustify",
-	"version": "1.1.0",
-	"description": "Dustify: the dustjs template compiler",
+	"name": "dustjs-tmpl",
+	"version": "2.0.0",
+	"description": "DustJS-tmpl: the dustjs template compiler",
 	"keywords": ["build", "builder", "dust", "dustjs", "linkedin", "template"],
-	"bin": "./bin/dustify",
-	"main": "./lib/dustify.js",
+	"bin": "./bin/dustjs-tmpl",
+	"main": "./lib/dustjs-tmpl.js",
 	"dependencies": {
-		"minimist": "~0.0.5",
-		"fs-extra": "~0.8.1",
-		"async": "~0.2.10",
-		"dustjs-recursivenodecompiler":"~3.0.0"
+		"minimist": "~1.1.1",
+		"fs-extra": "~0.18.3",
+		"async": "~0.9.0",
+		"dustjs-recursivenodecompiler":"~3.2.0"
 	},
 	"devDependencies": {
 		"tap": "~0.4.8"

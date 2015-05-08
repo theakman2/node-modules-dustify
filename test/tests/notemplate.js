@@ -4,7 +4,7 @@ var fs = require("fs-extra");
 
 var test = require("tap").test;
 
-var dustify = require("../../lib/dustify.js");
+var dustjstmpl = require("../../lib/dustjs-tmpl.js");
 
 var re = /dummy$/;
 
@@ -25,13 +25,13 @@ test("notemplate", function(t) {
 			t.end();
 			return;
 		}
-		dustify(opts, function(err,processedFiles) {
+		dustjstmpl(opts, function(err,processedFiles) {
 			if (err) {
-				t.fail("dustify errored: " + err);
+				t.fail("dustjs-tmpl errored: " + err);
 				t.end();
 				return;
 			}
-			t.pass("dustify did not error");
+			t.pass("dustjs-tmpl did not error");
 			t.equivalent(processedFiles,{},"0 files should have been processed");
 			fs.readdir(opts.build,function(err){
 				if (err && (err.code === "ENOENT")) {

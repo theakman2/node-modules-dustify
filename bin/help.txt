@@ -1,10 +1,10 @@
 ----------------------------------------------------------
- Dustify: the dustjs template compiler - (c) 2014 A Kazim
+ DustJS-tmpl: the dustjs template compiler - (c) 2014 A Kazim
 ----------------------------------------------------------
 
 USAGE
 
-dustify [options]
+dustjs-tmpl [options]
 
 OPTIONS
 
